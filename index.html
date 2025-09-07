@@ -87,11 +87,13 @@
     .hero-background {
       position: relative;
       height: 100vh;
-      background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center center/cover;
+      /* Adjust background position to show more of the child's face */
+      background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center 30%/cover;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end; /* Move content lower */
       margin-top: 60px; /* offset for fixed header */
+      padding-bottom: 60px; /* Add space from bottom */
     }
 
     .hero {
@@ -105,6 +107,8 @@
       color: #fff;
       background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
       border-radius: 10px;
+      /* Move the text box lower so it doesn't cover the face */
+      margin-bottom: 0;
     }
 
     .hero h1 {
