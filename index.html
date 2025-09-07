@@ -30,14 +30,12 @@
     }
 
     .logo img {
-      position: absolute;
-      height: 20px;
-      top: 60px;
-      left: 60px;
+      height: 40px;
+      display: block;
+      /* Removed position and any hardcoded top/left for better flex alignment */
+    }
       display: block;
     }
-
-    nav {
       display: flex;
       gap: 1.5rem;
       flex-wrap: nowrap;
