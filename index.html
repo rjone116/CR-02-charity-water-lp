@@ -11,36 +11,47 @@
     body {
       margin: 0;
       font-family: 'Proxima Nova', 'Montserrat', sans-serif;
+      overflow-x: hidden;
     }
 
     header {
       background-color: #0077b6;
       color: white;
-      padding: 1rem 2rem;
+      padding: 0.75rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-sizing: border-box;
     }
 
     .logo img {
       height: 40px;
+      display: block;
     }
 
     nav {
       display: flex;
       gap: 1.5rem;
+      flex-wrap: nowrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
 
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
+      margin-left: 1rem;
     }
 
     .hamburger span {
@@ -72,37 +83,88 @@
       }
     }
 
-    /* Hero Section */
+    /* Hero Background Image */
+    .hero-background {
+      position: relative;
+      height: 100vh;
+      background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px; /* offset for fixed header */
+    }
+
     .hero {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 50vh;
       text-align: center;
-      background-color: #f0f8ff;
       padding: 2rem;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
+      border-radius: 10px;
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      color: #0077b6;
       margin-bottom: 1rem;
     }
 
     .hero p {
       font-size: 1.2rem;
       font-weight: 400;
-      color: #333;
       max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .donate-btn {
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-family: 'Proxima Nova', 'Montserrat', sans-serif;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .donate-btn:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    /* Content Section */
+    .content {
+      background: #f0f8ff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="charitywater_logo_horizontal_BlackText.png" alt="Charity Water Logo">
+      <!-- Correct relative path to logo in img folder -->
+      <img src="img/charitywater_logo_horizontal_BlackText.png" alt="Charity Water Logo">
     </div>
     <nav id="nav">
       <a href="#home">Home</a>
@@ -116,9 +178,17 @@
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Clean Water Starts with You</h1>
-    <p>Because nobody deserves to live in fear of their next sip</p>
+  <section class="hero-background">
+    <div class="hero">
+      <h1>Clean Water Starts with You</h1>
+      <p>Because nobody deserves to live in fear of their next sip</p>
+      <button class="donate-btn">Donate $10</button>
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>About Our Mission</h2>
+    <p>We believe everyone deserves access to clean and safe drinking water. Together, we can make this a reality for communities around the world.</p>
   </section>
 
   <script>

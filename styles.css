@@ -2,7 +2,7 @@
 
 Primary Colors:
 - Yellow:     #FFC907
-- Blue:       #2E9DF7
+- Blue:       #77a8bb
 
 Secondary Colors:
 - Light Blue: #8BD1CB
@@ -194,5 +194,39 @@ section {
 
   .impact-image {
     width: 300px;
+  }
+}
+header {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px; /* desktop default */
+  width: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .logo img {
+    height: 35px; /* smaller on mobile */
+  }
+
+  header {
+    padding: 0.5rem 1rem; /* tighter spacing */
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center; /* centers vertically with logo */
+    margin-left: auto;   /* pushes hamburger to the right */
   }
 }
