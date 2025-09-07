@@ -87,54 +87,54 @@
     .hero-background {
       position: relative;
       height: 100vh;
-      /* Adjust background position to show more of the child's face */
-      background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center 30%/cover;
+      background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center 30%/cover; /* shift image down to show face */
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* move hero box lower */
       margin-top: 60px; /* offset for fixed header */
+      padding-bottom: 4rem; /* add space at bottom */
     }
 
     .hero {
-      position: absolute;
-      top: 30px;
-      left: 30px;
+      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      padding: 1.5rem 2rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.6); /* overlay for readability */
+      background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
       border-radius: 10px;
-      max-width: 350px;
-      z-index: 2;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      max-width: 90vw;
+      margin-bottom: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     }
 
     .hero h1 {
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      margin-top: 0;
     }
 
     .hero p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 400;
-      max-width: 300px;
-      margin-bottom: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 1.5rem;
     }
 
     .donate-btn {
       background-color: #0077b6;
       color: white;
       border: none;
-      padding: 0.6rem 1.2rem;
+      padding: 0.75rem 1.5rem;
       font-size: 1rem;
       font-family: 'Proxima Nova', 'Montserrat', sans-serif;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
-      margin-top: 0.5rem;
     }
 
     .donate-btn:hover {
