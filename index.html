@@ -89,52 +89,52 @@
       height: 100vh;
       /* Adjust background position to show more of the child's face */
       background: url('img/4832_Ethiopia_2019_CG-.jpg') no-repeat center 30%/cover;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end; /* Move content lower */
       margin-top: 60px; /* offset for fixed header */
-      padding-bottom: 60px; /* Add space from bottom */
     }
 
     .hero {
-      position: relative;
+      position: absolute;
+      top: 30px;
+      left: 30px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
+      align-items: flex-start;
+      text-align: left;
+      padding: 1.5rem 2rem;
       color: #fff;
-      background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
+      background-color: rgba(0, 0, 0, 0.6); /* overlay for readability */
       border-radius: 10px;
-      /* Move the text box lower so it doesn't cover the face */
-      margin-bottom: 0;
+      max-width: 350px;
+      z-index: 2;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     }
 
     .hero h1 {
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 1rem;
+      margin-top: 0;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
-      max-width: 600px;
-      margin-bottom: 1.5rem;
+      max-width: 300px;
+      margin-bottom: 1.2rem;
     }
 
     .donate-btn {
       background-color: #0077b6;
       color: white;
       border: none;
-      padding: 0.75rem 1.5rem;
+      padding: 0.6rem 1.2rem;
       font-size: 1rem;
       font-family: 'Proxima Nova', 'Montserrat', sans-serif;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease, color 0.3s ease;
+      margin-top: 0.5rem;
     }
 
     .donate-btn:hover {
